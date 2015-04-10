@@ -6,11 +6,11 @@ TestCollection = new Meteor.Collection('testData');
 
 var categories = ["Genius", "Geek", "Hipster", "Gangster", "Worker"];
 
-Router.route('/', function () {
+Router.route('/es', function () {
   this.render('home');
 });
 
-Router.route('/test', function () {
+Router.route('/es/test', function () {
   this.render('test');
 });
 
