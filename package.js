@@ -14,6 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
   api.use('templating', 'client');
   api.use('iron:router');
+  api.use('iron:controller');  
   api.use('matteodem:easy-search@1.5.4');
   api.addFiles('leaderboard.css', 'client');
   api.addFiles('leaderboard.html', 'client');
