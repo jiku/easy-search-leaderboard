@@ -27,7 +27,7 @@ if (Meteor.isClient) {
     selected_name: function() {
       var currentPlayer = Session.get("selected_player"),
         player = EasySearch.getIndex('players').findOne();
-      
+
       if (currentPlayer) {
           return player && player.name;
       }
@@ -151,7 +151,7 @@ if (Meteor.isServer) {
         return Players.find().count();
       }
     });
-    
+
     Meteor.publish('allDocs', function () {
       return [
         Players.find({}, { limit: 10 }),
@@ -236,7 +236,7 @@ EasySearch.createSearchIndex('players', {
 
 // Search Index for the autosuggest field
 EasySearch.createSearchIndex('playersAutosuggest', {
-  'collection': Players, 
+  'collection': Players,
   'use' : 'mongo-db',
   'field': ['name', 'score'],
   'convertNumbers': true
